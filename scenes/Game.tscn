@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/SpawnNotice.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Game.gd" type="Script" id=2]
+[ext_resource path="res://resources/levels/FirstLevel.tres" type="Resource" id=3]
+
+[node name="Game" type="CanvasLayer"]
+script = ExtResource( 2 )
+spawn_notice = ExtResource( 1 )
+_level = ExtResource( 3 )
+
+[node name="SpawnTimer" type="Timer" parent="."]
+
+[node name="Control" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 12.0
+margin_top = 12.0
+margin_right = -12.0
+margin_bottom = -12.0
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+margin_left = 500.0
+margin_top = 281.0
+margin_right = 500.0
+margin_bottom = 295.0
+
+[node name="LevelName" type="Label" parent="Control/GridContainer"]
+margin_bottom = 14.0
+
+[node name="Popup" type="PopupPanel" parent="Control"]
+margin_left = 426.0
+margin_top = 268.0
+margin_right = 573.0
+margin_bottom = 307.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/Popup"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 143.0
+margin_bottom = 35.0
+
+[node name="Label" type="Label" parent="Control/Popup/CenterContainer"]
+margin_right = 139.0
+margin_bottom = 31.0
+text = "Level Completed!!
+(Closing in 5 seconds)"
+align = 1
+valign = 1

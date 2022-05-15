@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://code/Level.gd" type="Script" id=1]
+[ext_resource path="res://resources/waves/ZombieWave.tres" type="Resource" id=2]
+[ext_resource path="res://resources/waves/PirateWave.tres" type="Resource" id=3]
+[ext_resource path="res://resources/waves/GoblinWave.tres" type="Resource" id=4]
+
+[resource]
+script = ExtResource( 1 )
+id = "My Second Level"
+respawn_time = 2.0
+waves = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ]
